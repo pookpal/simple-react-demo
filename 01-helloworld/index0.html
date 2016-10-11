@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="../js/react.js"></script> <!--react类库-->
+    <script src="../js/react-dom.js"></script><!--react-dom类库,客户端dom-->
+</head>
+<body>
+
+<div id="app">
+
+</div>
+
+<script type="text/javascript">
+    ReactDOM.render(
+            React.DOM.h1(null, 'Hello World!'),     //这种写法非常麻烦，希望可以使用jsx es6等
+            document.getElementById('app')
+    );
+</script>
+
+</body>
+</html>
