@@ -16,7 +16,7 @@ class ToDoBox extends React.Component{
                 {id: 5, task: '给女神问晚安', complete: false}
             ]
 
-        }
+        };
     }
     render(){
         return(

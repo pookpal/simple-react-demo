@@ -4,11 +4,15 @@
 
 
 class ToDoBox extends React.Component{
+
     constructor(props) {
+
         super(props);
+
         this.state = {
             tasks: []
         };
+
         this.toggleTaskCompletedStatus = this.toggleTaskCompletedStatus.bind(this);
         this.deleteTask = this.deleteTask.bind(this);
         this.addTask = this.addTask.bind(this);
@@ -16,23 +20,31 @@ class ToDoBox extends React.Component{
 
     // 切换任务完成状态
     toggleTaskCompletedStatus(task_id){
+
         let tasks = this.state.tasks;
+
         for(let i in tasks ){
             if(tasks[i]['id'] == task_id){
                 tasks[i].complete = tasks[i].complete === true ? false : true;
                 break;
             }
         }
+
         this.setState({tasks:tasks});
 
     }
 
     // 删除任务
     deleteTask(task_id){
+
         let tasks = this.state.tasks;
+
         let newTasks = tasks.filter(function(item){
+
             return item.id != task_id;
+
         });
+
         this.setState({tasks:newTasks});
     }
 
@@ -67,7 +79,6 @@ class ToDoBox extends React.Component{
                 <ToDoLists
                     tasks={this.state.tasks}
                     footerParam = {staticCount}
-
                     toggleTaskCompletedStatus = {this.toggleTaskCompletedStatus.bind(this)}
                     deleteTask = {this.deleteTask.bind(this)}
                 />
@@ -146,8 +157,10 @@ class ToDoItem extends React.Component {
 
     render(){
 
-        var item = this.props.item
+        var item = this.props.item;
+
         var classnames='list-group-item';
+
         var task = item.task;
         if(item.complete){
             classnames +=' list-group-item-success';

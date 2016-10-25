@@ -1,9 +1,11 @@
 
 
 class HelloWolrd extends React.Component{
+
     constructor(props){
         super(props);
     }
+
     render(){
         return(
             <div>
@@ -12,9 +14,12 @@ class HelloWolrd extends React.Component{
             </div>
         )
     }
+
 }
+
 // 获取dom节点
 const targetEle = document.getElementById('app');
+
 ReactDOM.render(
     <HelloWolrd />,
     targetEle

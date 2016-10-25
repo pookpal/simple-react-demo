@@ -11,9 +11,12 @@ class ToDoBox extends React.Component{
 
         return(
             <div className="well">
-                <h1 className="text-center">React Todo</h1>
+
+                <h1 className="text-center">React Todo </h1>
 
                 <ul className="list-group">
+
+
                   <li className="list-group-item list-group-item-success">
                       <input type="checkbox" checked="true"  className="pull-left" />
                       <s>给女神修电脑</s>
@@ -24,7 +27,7 @@ class ToDoBox extends React.Component{
 
                   <li className="list-group-item ">
                         <input  type="checkbox" className="pull-left" />
-                        配女神逛逛逛
+                        陪女神逛逛逛
                         <div className="pull-right">
                             <button type="button" className="btn btn-xs"  ref="deleteBtn">删除</button>
                         </div>
@@ -32,7 +35,7 @@ class ToDoBox extends React.Component{
 
                   <li className="list-group-item ">
                         <input  type="checkbox" className="pull-left" />
-                        配女神买买买
+                        陪女神买买买
                         <div className="pull-right">
                             <button type="button" className="btn btn-xs"  ref="deleteBtn">删除</button>
                         </div>
@@ -73,6 +76,7 @@ class ToDoBox extends React.Component{
                         </div>
                     </form>
                 </div>
+
             </div>
         );
     }
